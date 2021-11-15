@@ -14,6 +14,8 @@ backend:
 		--rm \
 		--name notes-backend \
 		--network notes-net \
+		-v C:\Git-repositories\_volgatech-repositories\docker-mern\server:/app \
+		-v /app/node_modules \
 		--env-file ./config/development.env \
 		notes-backend
 
