@@ -24,4 +24,7 @@ frontend:
 		-d \
 		--rm \
 		--name notes-frontend \
+		-v C:\Git-repositories\_volgatech-repositories\docker-mern\client\src:/app/src \
+		-v /app/node_modules \
+		--env-file ./config/development.env \
 		notes-frontend
