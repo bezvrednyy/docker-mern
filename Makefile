@@ -4,6 +4,7 @@ mongo:
  		--rm \
  		--name notes-mongo \
  		--network notes-net \
+ 		-v mongo-data:/data/db \
  		 mongo
 
 backend:
