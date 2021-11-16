@@ -8,6 +8,14 @@ services:
       - mongo-data:/data/db
     env_file:
       - ./config/production.env
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.production
+    ports:
+      - "80:80"
+    env_file:
+      - ./config/production.env
   backend:
     build:
       context: ./server
