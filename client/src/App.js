@@ -3,7 +3,9 @@ import axios from 'axios'
 import {List} from './List'
 import {Form} from './Form'
 
-const baseURL = 'http://localhost:5000'
+const baseURL = process.env.NODE_ENV === 'production'
+    ? 'http://localhost:5000' //Заменяем на тот хост, где у нас лежит backend
+    : 'http://localhost:5000'
 const api = axios.create({ baseURL })
 
 function App() {
