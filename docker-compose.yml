@@ -9,6 +9,7 @@ services:
     env_file:
       - ./config/development.env
   frontend:
+    image: "notes-frontend-dev"
     build: ./client
     ports:
       - "3000:3000"
@@ -17,6 +18,7 @@ services:
     env_file:
       - ./config/development.env
   backend:
+    image: "notes-backend-dev"
     build:
       context: ./server
       dockerfile: Dockerfile
